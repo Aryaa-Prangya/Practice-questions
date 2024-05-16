@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARITHMETIC CALCULATION</title>
+    
+</head>
+<body>
+    <h1 style="color:rgb(23, 193, 23)">Arithmetic Operation using JavaScript</h1>
+    <p><strong>1. Enter two numbers in text boxes<br>2. Choose an arithmetic operation from the dropdown.<br>3. Click the 'Calculate' button to see the result</strong></p>
+    <div id="input-group">
+    <input type="text"   id="num1">
+    <select id="operator">
+        <option>-Choose-</option>
+        <option value="add">+(add)</option>
+        <option value="subtract">-(subtract)</option>
+        <option value="multiply">*(multiply)</option>
+        <option value="divide">/(divide)</option>
+        <option value="divide">%(modulus)</option>
+    </select>
+    <input type="text"  id="num2"> =
+    <input type="text"  value="" id="result" style="background-color: rgb(243, 243, 183);" disabled>
+    
+    <button  onclick="calculate()" style="color:rgb(14, 148, 14)">Calculate</button>
+    <button   onclick="reset()" style="color:rgb(224, 19, 19)">Reset</button>
+    
+</div>
+</body>
+<script type="text/javascript" src="q2.js"></script>
+</html>

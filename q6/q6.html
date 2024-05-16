@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <h2>JavaScript Functions</h2>
+
+    <script>
+        // Function to count the number of times the word "that" occurs in a piece of text
+        function countWordOccurrences(text, word) {
+            var regex = new RegExp("\\b" + word + "\\b", "gi");
+            var matches = text.match(regex);
+            return matches ? matches.length : 0;
+        }
+
+        // Function to calculate the value of PI rounded to n digits after the decimal point
+        function calculatePI(n) {
+            if (n < 1 || n > 15) {
+        return "Please provide a number between 1 and 15.";
+    }
+            var precision = Math.pow(10, n);
+            var pi = Math.PI;
+            var roundedPI = Math.round(pi * precision) / precision;
+            return roundedPI;
+        }
+
+        // Function to calculate the area of a triangle given the lengths of the three sides
+        function calculateTriangleArea(side1, side2, side3) {
+            var s = (side1 + side2 + side3) / 2;
+            return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        }
+
+        // Test cases
+        var text = "That is the word that we are looking for.";
+        var word = "that";
+        var occurrences = countWordOccurrences(text, word);
+        document.write("<p>Number of occurrences of the word 'that': " + occurrences + "</p>");
+
+        var decimals = 5;
+        var piValue = calculatePI(decimals);
+        var decimal = 25;
+        var piVal = calculatePI(decimal);
+        document.write("<p>Value of PI rounded to " + decimals + " decimal places: " + piValue + "</p>");
+        document.write("<p>Value of PI rounded to " + decimal + " decimal places: " + piVal + "</p>");
+
+        var side1 = 3, side2 = 4, side3 = 5;
+        var area = calculateTriangleArea(side1, side2, side3);
+        document.write("<p>Area of the triangle with sides " + side1 + ", " + side2 + ", " + side3 + ": " + area + "</p>");
+    </script>
+</body>
+</html>

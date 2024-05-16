@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum and Average</title>
+</head>
+<body>
+    <h2>Sum and Average</h2>
+
+    <script>
+        // Function to calculate the sum of numbers
+        function sum() {
+            var total = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total;
+        }
+
+        // Function to calculate the average of numbers
+        function average() {
+            var total = sum.apply(null, arguments);
+            return total / arguments.length;
+        }
+
+        // Testing the functions
+        
+    
+        document.write("<p>Sum of 30, 25, 50: " + sum(30, 25, 50) + "</p>");
+        document.write("<p>Sum of 2, 4, 6, 8, 10: " + sum(2, 4, 6, 8, 10) + "</p>");
+
+      
+        document.write("<p>Average of 30, 25, 50: " + average(30, 25, 50) + "</p>");
+        document.write("<p>Average of 2, 4, 6, 8, 10: " + average(2, 4, 6, 8, 10) + "</p>");
+    </script>
+</body>
+</html>

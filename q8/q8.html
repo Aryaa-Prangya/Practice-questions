@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registration Form</title>
+    <style>
+        textarea{
+            height:55px;
+            width:400px;
+        }
+       
+        h3{
+            color: green;
+        }
+        h3{
+            line-height:0;
+        }
+       
+        #note{
+            line-height: 0;
+        }
+        form{
+            line-height: 0.8;
+        }
+      
+    </style>
+</head>
+<body>
+    <div align="center">
+    <img height="45" width="100" src="https://www.mathworks.com/academia/tah-portal/silicon-institute-of-technology-31482356/_jcr_content/schoolLogo.adapt.full.medium.png/1671016978993.png" alt="Silicon Logo">
+
+    <hr width="50%">
+    <h3>Alumni Registration Form</h3>
+    <strong>Welcome! Please fill out the details below and click the 'Register' button</strong>
+    <p id="note">Note: Fields marked with <sup style="color:red"> * </sup> are required</p>
+    <form id="alumniForm" onsubmit="return validateForm()">
+        <!-- <table border="1" cellspacing="0" >
+            <tr> -->
+                
+                <table border="1" cellspacing="0" style="background-color:#DEE8F7" cellpadding="3">
+                    <tr>
+                       
+                            <td>
+                                First Name:
+                                <sup style="color: red;">*</sup> 
+                                <br>
+                                <br>
+                                Middle Name:
+                            </td>
+                            <td>
+                                <input type="text" id="first" name="first" required>
+                                <br>
+                                <br>
+                                <input type="text" name="middle" >
+                
+                            </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name   <sup style="color: red;">*</sup> 
+                        </td>
+                        <td>
+                            <input type="text" id="lastname" name="last" required>
+                        </td>
+                        <!-- </td> -->
+                    </tr>
+                <tr>             
+                    <td>
+                                    Branch:
+                                    <sup style="color: red;">*</sup> 
+                                    <br>
+                                    <br>
+                                    Batch:
+                                    <sup style="color: red;">*</sup> 
+                      </td>
+                                <td>
+                                   <select id="branch" name="branch" required>
+                                    <option>--Choose--</option>
+                                    <option>ECE</option>
+                                    <option>CSE</option>
+                                    <option>EEE</option>
+                                    <option>EIE</option>
+                                   </select>
+                                   <br>
+                                   <br>
+                                    <select id="batch" name="batch" required>
+                                        <option>--Choose--</option>
+                                        <option>2021-25</option>
+                                        <option>2020-24</option>
+                                       </select>
+                                </td>
+                </tr>
+                <tr>
+                    <td>
+                        Year Of Passing
+                        <sup style="color: red;">*</sup> 
+                        <br>
+                        <br>
+                        Mobile Number
+                        <sup style="color: red;">*</sup> 
+                    </td>
+                    <td>
+                        <input type="number" id="yearOfPassing" name="yearOfPassing" maxlength= "4" required>
+                        <br>
+                        <br>
+                        <input type="number" id="mobileNumber" name="mobileNumber"  required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email Address
+                        <sup style="color: red;">*</sup> 
+                        <br>
+                        <br>
+                        Postal Address
+                        <sup style="color: red;">*</sup>
+                        <br>
+                        <br>
+                        Marital Status
+                    </td>
+                    <td>
+                        <input type="text" id="emailAddress" name="" required>
+                        <br>
+                        <br>
+                        <input type="text" id="postalAddress" name="postalAddress" required>
+                        <br>
+                        <br>
+                        <input type="radio" checked>Unmarried
+                        <input type="radio">Married
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Additional Education 
+                        <br><br><br>
+                        Tell Us More<br> About Yourself
+                        <sup style="color: red;">*</sup><br>
+                        <small>(Maximum 1000 characters)</small>
+                        <br><br>
+                        <br>
+                       
+                        Receive Newsletter?
+                    </td>
+                
+               <td valign="top">
+                <input type="checkbox">M.Tech
+                <input type="checkbox">MBA
+                <input type="checkbox">PHD
+                <input type="checkbox">Other
+                <input type="text">
+                <br>
+                <br>
+                <br>
+
+                <textarea id="textarea" name="textarea" required></textarea>
+                <br>
+                
+
+                <input type="radio" checked>Yes,Please!
+                <input type="radio">No,sorry!
+                <br>
+                <br>
+                <button  style="color:green;">Register Me!</button>
+                <button style="color:  red;" onclick="clearForm()">Clear</button>
+               </td>
+
+            </tr>
+            </table>
+         <!-- </tr>
+           
+        </table> -->
+    </form>
+    <hr width="50%">
+    <small id="copy">&copy 2010-2016,All Rights Reserved.<br>Silicon Institute of Technology<br>Silicon Hills,Patia,Bhubaneswar 751024<br>Website:<a href="www.silicon.ac.in">www.silicon.ac.in</a></small>
+</div>
+</body>
+<script language="javascript" type="text/javascript" src="q8.js"></script>
+</html>

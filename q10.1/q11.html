@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Circle Object</h2>
+
+    <script>
+        function Circle(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.getArea = function() {
+                return Math.PI * this.r * this.r;
+            };
+            this.getPerimeter = function() {
+                return 2 * Math.PI * this.r;
+            };
+        }
+
+        // Creating an instance of the Circle object
+        var circle = new Circle(0, 0, 5);
+
+        // Displaying circle information on the webpage
+        document.write("<p>Center: (" + circle.x + ", " + circle.y +")</p>");
+        document.write("<p>Radius: " + circle.r +  "</p>");
+        document.write("<p>Area: " + circle.getArea().toFixed(2) +"</p>");
+        document.write("<p>Perimeter: " + circle.getPerimeter().toFixed(2) +"</p>");
+        
+    </script>
+</body>
+</html>

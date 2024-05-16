@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+</head>
+<body>
+    <h2>Person Details</h2>
+
+    
+</body>
+
+<script>
+    // Define the Person object
+    function Person(firstName, lastName, dateOfBirth) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = new Date(dateOfBirth);
+
+        // Method to get the full name
+        this.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+        };
+
+        // Method to calculate age
+        this.getAge = function () {
+            var today = new Date();
+            var age = today.getFullYear() - this.dateOfBirth.getFullYear();
+            var month = today.getMonth() - this.dateOfBirth.getMonth();
+            if (month < 0 || (month === 0 && today.getDate() < this.dateOfBirth.getDate())) {
+                age--;
+            }
+            return age;
+        };
+    }
+
+    // Test the code
+    var person1 = new Person("Arya", "Prangya", "2003-01-15");
+    var person2 = new Person("Anusika", "Das", "2000-10-20");
+
+    // Displaying results
+    document.write("<p>Person 1: " + person1.getFullName() + ", Age: " + person1.getAge() + "</p>");
+    document.write("<p>Person 2: " + person2.getFullName() + ", Age: " + person2.getAge() + "</p>");
+</script>
+</html>

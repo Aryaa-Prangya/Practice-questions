@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #circle-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Circle Object</h2>
+
+    <div id="circle-info">
+        <h3>Circle Information:</h3>
+        <p id="center">Center: </p>
+        <p id="radius">Radius: </p>
+        <p id="area">Area: </p>
+        <p id="perimeter">Perimeter: </p>
+    </div>
+
+    <script>
+        function Circle(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+        }
+
+        Circle.prototype.getArea = function() {
+            return Math.PI * this.r * this.r;
+        };
+
+        Circle.prototype.getPerimeter = function() {
+            return 2 * Math.PI * this.r;
+        };
+
+        // Creating an instance of the Circle object
+        var circle = new Circle(0, 0, 5);
+
+        // Displaying circle information on the webpage
+        document.getElementById("center").textContent = "Center: (" + circle.x + ", " + circle.y + ")";
+        document.getElementById("radius").textContent = "Radius: " + circle.r;
+        document.getElementById("area").textContent = "Area: " + circle.getArea().toFixed(2);
+        document.getElementById("perimeter").textContent = "Perimeter: " + circle.getPerimeter().toFixed(2);
+    </script>
+</body>
+</html>
