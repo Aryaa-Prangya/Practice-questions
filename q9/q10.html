@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Number Generator</title>
+    <style>
+        body {
+            background-color:aliceblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2{
+            margin-top: 15%;
+        }
+        
+      
+        #fibonacci-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #fibonacci-list li {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        #user-input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fibonacci Number Generator</h2>
+    <div id="user-input">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" min="1" placeholder="Enter a number">
+        <button onclick="generateFibonacci()">Generate Fibonacci Numbers</button>
+    </div>
+
+    <ul id="fibonacci-list"></ul>
+
+    <script>
+        function generateFibonacci() {
+            var userInput = document.getElementById("number").value;
+            var fibonacciList = document.getElementById("fibonacci-list");
+            fibonacciList.innerHTML = "";
+
+            var a = 0, b = 1, nextTerm;
+
+            while (a <= 500 && a <= userInput) {
+                var listItem = document.createElement("li");
+                listItem.textContent = a;
+                fibonacciList.appendChild(listItem);
+
+                nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+            }
+        }
+    </script>
+</body>
+</html>
